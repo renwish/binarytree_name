@@ -62,5 +62,13 @@ if __name__ == '__main__':
     letters = ["n","e","r","u","g","b","a","s","i","o"]
     letter_tree = build_tree(letters)
 
-    print("is N a letter in my name? ", letter_tree.search("n"))
-    print("Does my name contain the letter Y? ", letter_tree.search("y"))
+    searchletter = input("What letter do you want to look for in my name? ")
+
+    searchletter = searchletter.lower()
+    result = letter_tree.search(searchletter)
+        
+    if result == True:
+        print("yes, my name DOES contain that letter")
+
+    else:
+        print("no, my name does NOT contain that letter")
